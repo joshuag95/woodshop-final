@@ -24,7 +24,7 @@ const App = () => {
   }, []);
 
   if (!isAuthenticated) {
-    return <div></div>;
+    return <div><LoggedOut setCurrentUser = {setCurrentUser} /></div>;
   }
 
   const handleLogout = () => {
