@@ -1,0 +1,7 @@
+rails g resource user name address phone email password_digest
+
+rails g resource product name inventory:integer description:text price:decimal image
+
+rails g resource cart confirmed:boolean client:belongs_to 
+
+rails g resource cart_product cart:belongs_to product:belongs_to
