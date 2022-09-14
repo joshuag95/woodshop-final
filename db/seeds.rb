@@ -8,7 +8,7 @@ require "faker"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Seeding 🌱"
-5.times do User.create(name: Faker::Name.unique.name , address: Faker::Address.city , phone: Faker::PhoneNumber.phone_number , email: Faker::Internet.email )
+5.times do User.create(name: Faker::Name.unique.name , address: Faker::Address.city , phone: Faker::PhoneNumber.phone_number , email: Faker::Internet.email , password_digest: rand(100...999))
 end
 
 10.times do Product.create(name: Faker::House.furniture , inventory: rand(1..10) , description: Faker::Marketing.buzzwords, price: rand(12.50..199.99).round(2), image: "placeholder.gif" )
