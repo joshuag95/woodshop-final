@@ -1,7 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
   background-color: #282c34;
   color: white;
   align-items: center;
 }
+
+
 
