@@ -5,3 +5,7 @@ export default function Profile(){
         <div>Profile</div>
     )
 }
+
+// Profile
+//My details (pop with user info)
+//My carts (populate each carts container with list of products & remove button)
