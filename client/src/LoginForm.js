@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {useHistory} from 'react-router-dom'
 const LoginForm = ({setCurrentUser}) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -15,6 +15,7 @@ const LoginForm = ({setCurrentUser}) => {
       
     });
   };
+ 
  
   const handleSubmit = (event) => {
     console.log(formData)
@@ -39,27 +40,38 @@ const LoginForm = ({setCurrentUser}) => {
     });
   };
 
+  const history = useHistory("");
+
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Username:</label>
-      <input
-        id="name-input"
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-      />
-      <label htmlFor="password">Password:</label>
-      <input
-        id="password-input"
-        type="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div>
+        <form onSubmit={handleSubmit}>
+            <label htmlFor="name">Username:</label>
+            <input
+              id="name-input"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <label htmlFor="password">Password:</label>
+            <input
+              id="password-input"
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+            <button type="submit">Submit</button>
+        </form>
+              <br></br>
+        <div className="signupPrompt">
+            <p>Don't have an Account?</p>
+            <button onClick={() => {history.push('/signup')}}>Click Here To Create An Account</button>
+            </div>
+      </div>
   );
+
+
 };
 
 export default LoginForm;
