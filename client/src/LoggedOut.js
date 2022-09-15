@@ -15,7 +15,7 @@ function LoggedOut({handleLogout, setCurrentUser, products}) {
            
             {/* <Switch> */}
                 <Route exact path="/">
-                    <Home />
+                    <Home setCurrentUser = {setCurrentUser} />
                 </Route>
                 
                 <Route exact path='/signup'>

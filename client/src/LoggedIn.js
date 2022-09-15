@@ -7,14 +7,14 @@ import Home from "./Home";
 import SignupForm from "./SignupForm";
 
 
-function LoggedIn({handleLogout, products}) {
+function LoggedIn({handleLogout, products, setCurrentUser}) {
     return (
         <div>
             <NavBar handleLogout = {handleLogout} />
 
             <Switch>
                 <Route exact path="/">
-                    <Home />
+                    <Home setCurrentUser = {setCurrentUser}/>
                 </Route>
 
                 <Route exact path="/me">
