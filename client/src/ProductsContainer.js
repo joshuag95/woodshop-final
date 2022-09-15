@@ -1,10 +1,10 @@
 import React from "react";
-import ProductsCards from './ProductsCard'
+import ProductsCard from "./ProductsCard"
 
 
 const ProductsContainer = ({products}) => {
     const ProductsComponent = products.map(product => {
-        return <ProductsCards key = {product.id} products = {product } > <img src = 'img not found' alt='img not found' /></ProductsCards>
+        return <ProductsCard key = {product.id} products = {product } > <img src = 'img not found' alt='img not found' /></ProductsCard>
     })
 
     return (

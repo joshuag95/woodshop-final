@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import LoggedIn from "./LoggedIn";
 import LoggedOut from "./LoggedOut";
 import {useHistory} from 'react-router-dom'
-import SignupForm from "./SignupForm";
+
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -31,10 +31,19 @@ const App = () => {
     .then(()=> history.push('/login'))
     }
   
+    const [products , setProducts] = useState([])
+
+    useEffect(() => {
+      fetch('/products')
+      .then(resp => resp.json())
+      .then(products => setProducts(products))
+    },[])
   
+    console.log(products)  
+
   return (
     <div className="app">
-      <Router>{isAuthenticated ? <LoggedIn handleLogout = {handleLogout} /> : <LoggedOut setCurrentUser = {setCurrentUser} />}</Router>
+      <Router>{isAuthenticated ? <LoggedIn handleLogout = {handleLogout} products = {products} /> : <LoggedOut setCurrentUser = {setCurrentUser} products = {products} />}</Router>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-const ProductsCards = ({products}) => {
+const ProductsCard = ({products}) => {
     return(
 
         <div className= 'card'>
@@ -30,4 +30,4 @@ const ProductsCards = ({products}) => {
 
 
 
-export default ProductsCards
+export default ProductsCard

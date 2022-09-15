@@ -7,7 +7,7 @@ import Home from "./Home";
 import SignupForm from "./SignupForm";
 
 
-function LoggedIn({handleLogout}) {
+function LoggedIn({handleLogout, products}) {
     return (
         <div>
             <NavBar handleLogout = {handleLogout} />
@@ -26,7 +26,7 @@ function LoggedIn({handleLogout}) {
                 </Route>
 
                 <Route exact path='/products'>
-                    <Products />
+                    <Products products = {products}/>
                 </Route>
               
             </Switch>
