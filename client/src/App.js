@@ -23,7 +23,7 @@ const App = () => {
       }
     });
   }, []);
-
+  
 
   const handleLogout = () => {
     setCurrentUser(null);
@@ -39,7 +39,7 @@ const App = () => {
       .then(products => setProducts(products))
     },[])
   
-    console.log(products)  
+    
 
   return (
     <div className="app">
