@@ -5,3 +5,36 @@ rails g resource product name inventory:integer description:text price:decimal i
 rails g resource cart confirmed:boolean client:belongs_to 
 
 rails g resource cart_product cart:belongs_to product:belongs_to
+
+rocking horse
+https://images.pexels.com/photos/2273499/pexels-photo-2273499.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+barstools
+https://images.pexels.com/photos/2829032/pexels-photo-2829032.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+wooden spoons
+https://images.pexels.com/photos/326268/pexels-photo-326268.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+cafe set
+https://images.pexels.com/photos/2647714/pexels-photo-2647714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+wooden bench
+https://images.pexels.com/photos/289445/pexels-photo-289445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+kitchen island
+https://images.pexels.com/photos/8902122/pexels-photo-8902122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+deluxe dining room
+https://images.pexels.com/photos/4221396/pexels-photo-4221396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+kitchen cabinets
+https://images.pexels.com/photos/3935337/pexels-photo-3935337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+cutting board
+https://images.pexels.com/photos/4197827/pexels-photo-4197827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+lazy susan
+https://images.pexels.com/photos/8329339/pexels-photo-8329339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+
+
