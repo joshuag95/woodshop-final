@@ -5,14 +5,15 @@ import Products from './Products'
 import {Route, Switch} from 'react-router-dom'
 import Home from "./Home";
 import SignupForm from "./SignupForm";
+import LoginForm from "./LoginForm";
 
 
 function LoggedOut({handleLogout, setCurrentUser}) {
     return (
         <div>
             <NavBar handleLogout = {handleLogout} />
-
-            <Switch>
+           
+            {/* <Switch> */}
                 <Route exact path="/">
                     <Home />
                 </Route>
@@ -25,7 +26,11 @@ function LoggedOut({handleLogout, setCurrentUser}) {
                     <Products />
                 </Route>
               
-            </Switch>
+                <Route exact path='/loginForm'>
+                    <LoginForm setCurrentUser = {setCurrentUser} />
+                </Route>
+              
+            {/* </Switch> */}
         </div>
     )
 }

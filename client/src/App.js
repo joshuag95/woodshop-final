@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import LoggedIn from "./LoggedIn";
 import LoggedOut from "./LoggedOut";
 import {useHistory} from 'react-router-dom'
+import SignupForm from "./SignupForm";
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -23,9 +24,6 @@ const App = () => {
     });
   }, []);
 
-  if (!isAuthenticated) {
-    return <div><LoggedOut setCurrentUser = {setCurrentUser} /></div>;
-  }
 
   const handleLogout = () => {
     setCurrentUser(null);
@@ -36,7 +34,7 @@ const App = () => {
   
   return (
     <div className="app">
-      <Router>{false ? <LoggedIn handleLogout = {handleLogout} /> : <LoggedOut setCurrentUser = {setCurrentUser} />}</Router>
+      <Router>{isAuthenticated ? <LoggedIn handleLogout = {handleLogout} /> : <LoggedOut setCurrentUser = {setCurrentUser} />}</Router>
     </div>
   );
 };

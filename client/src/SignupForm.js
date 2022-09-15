@@ -2,9 +2,11 @@ import React, { useState } from "react";
 
 const SignupForm = ({setCurrentUser}) => {
   const [formData, setFormData] = useState({
-    username: "",
+    name: "",
     password: "",
     email: "",
+    phone: "", 
+    address: ""
   });
 
   const handleChange = (e) => {
@@ -39,12 +41,12 @@ const SignupForm = ({setCurrentUser}) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="username">Username:</label>
+      <label htmlFor="name">Name:</label>
       <input
-        id="username-signup-input"
+        id="name-signup-input"
         type="text"
-        name="username"
-        value={formData.username}
+        name="name"
+        value={formData.name}
         onChange={handleChange}
       />
       <label htmlFor="email">Email:</label>
@@ -61,6 +63,22 @@ const SignupForm = ({setCurrentUser}) => {
         type="password"
         name="password"
         value={formData.password}
+        onChange={handleChange}
+      />
+      <label htmlFor="phone">Phone:</label>
+      <input
+        id="phone-signup-input"
+        type="text"
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+      />
+      <label htmlFor="address">address:</label>
+      <input
+        id="address-signup-input"
+        type="text"
+        name="address"
+        value={formData.address}
         onChange={handleChange}
       />
       <button type="submit">Submit</button>

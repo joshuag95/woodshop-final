@@ -1,18 +1,23 @@
 import React, { useState } from "react";
 
-const LoginForm = () => {
+const LoginForm = ({setCurrentUser}) => {
   const [formData, setFormData] = useState({
-    username: "",
+    name: "",
     password: "",
   });
 
   const handleChange = (e) => {
+    console.log()
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
+      
+      
     });
   };
+ 
   const handleSubmit = (event) => {
+    console.log(formData)
     event.preventDefault();
     fetch("/login", {
       method: "POST",
@@ -21,6 +26,7 @@ const LoginForm = () => {
       },
       body: JSON.stringify(formData),
     }).then((res) => {
+      console.log(res)
       if (res.ok) {
         res.json().then((user) => {
           setCurrentUser(user);
@@ -35,12 +41,12 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="username">Username:</label>
+      <label htmlFor="name">Username:</label>
       <input
-        id="username-input"
+        id="name-input"
         type="text"
-        name="username"
-        value={formData.username}
+        name="name"
+        value={formData.name}
         onChange={handleChange}
       />
       <label htmlFor="password">Password:</label>
