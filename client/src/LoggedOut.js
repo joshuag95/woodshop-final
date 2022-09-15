@@ -8,18 +8,18 @@ import SignupForm from "./SignupForm";
 import LoginForm from "./LoginForm";
 
 
-function LoggedOut({handleLogout, setCurrentUser, products}) {
+function LoggedOut({handleLogout, setCurrentUser, products, isAuthenticated}) {
     return (
         <div>
             <NavBar handleLogout = {handleLogout} />
            
-            {/* <Switch> */}
+            
                 <Route exact path="/">
                     <Home setCurrentUser = {setCurrentUser} />
                 </Route>
                 
                 <Route exact path='/signup'>
-                    <SignupForm setCurrentUser = {setCurrentUser} />
+                    <SignupForm setCurrentUser = {setCurrentUser}  />
                 </Route>
 
                 <Route exact path='/products'>
@@ -27,10 +27,10 @@ function LoggedOut({handleLogout, setCurrentUser, products}) {
                 </Route>
               
                 <Route exact path='/loginForm'>
-                    <LoginForm setCurrentUser = {setCurrentUser} />
+                    <LoginForm setCurrentUser = {setCurrentUser} isAuthenticated = {isAuthenticated}/>
                 </Route>
               
-            {/* </Switch> */}
+          
         </div>
     )
 }

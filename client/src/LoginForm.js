@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import {useHistory} from 'react-router-dom'
-const LoginForm = ({setCurrentUser}) => {
+
+
+const LoginForm = ({setCurrentUser, isAuthenticated}) => {
   const [formData, setFormData] = useState({
     name: "",
     password: "",
@@ -64,10 +66,11 @@ const LoginForm = ({setCurrentUser}) => {
             <button type="submit">Submit</button>
         </form>
               <br></br>
-        <div className="signupPrompt">
+        
+        {!isAuthenticated ? <div className="signupPrompt">
             <p>Don't have an Account?</p>
             <button onClick={() => {history.push('/signup')}}>Click Here To Create An Account</button>
-            </div>
+            </div> : null}
       </div>
   );
 

@@ -32,18 +32,17 @@ const App = () => {
     }
   
     const [products , setProducts] = useState([])
-
+console.log(currentUser)
     useEffect(() => {
       fetch('/products')
       .then(resp => resp.json())
       .then(products => setProducts(products))
     },[])
   
-    console.log(products)  
-
+    
   return (
     <div className="app">
-      <Router>{isAuthenticated ? <LoggedIn handleLogout = {handleLogout} products = {products} /> : <LoggedOut setCurrentUser = {setCurrentUser} products = {products} />}</Router>
+      <Router>{isAuthenticated ? <LoggedIn handleLogout = {handleLogout} isAuthenticated = {isAuthenticated} products = {products} /> : <LoggedOut isAuthenticated = {isAuthenticated} setCurrentUser = {setCurrentUser} products = {products} />}</Router>
     </div>
   );
 };

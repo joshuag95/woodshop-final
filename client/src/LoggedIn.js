@@ -7,10 +7,10 @@ import Home from "./Home";
 import SignupForm from "./SignupForm";
 
 
-function LoggedIn({handleLogout, products, setCurrentUser}) {
+function LoggedIn({handleLogout, products, setCurrentUser, isAuthenticated}) {
     return (
         <div>
-            <NavBar handleLogout = {handleLogout} />
+            <NavBar handleLogout = {handleLogout} isAuthenticated = {isAuthenticated} />
 
             <Switch>
                 <Route exact path="/">
