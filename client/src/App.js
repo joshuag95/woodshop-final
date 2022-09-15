@@ -40,6 +40,7 @@ const App = () => {
       .then(products => setProducts(products))
     },[])
   
+    console.log((currentUser))
     
   return (
     <div className="app">

@@ -6,11 +6,11 @@ const ProfileCard = ({user}) => {
  
     <div className= 'profile'>
         <>
-        <h2 className ='user header'>{user.name}</h2>
-        <h3 className="user subhead">My profile details:</h3>
-        <p className = 'user phone'>{user.phone}</p>
-        <p className = 'user email'>{user.email}</p>
-        <p className = 'user address'>{user.address}</p>
+        <h2 className ='user header'>Name: {user.name}</h2>
+        <h3 className="user subhead">My profile details</h3>
+        <p className = 'user phone'>Phone: {user.phone}</p>
+        <p className = 'user email'>Email: {user.email}</p>
+        <p className = 'user address'>Shipping Address: {user.address}</p>
         </>
 
 

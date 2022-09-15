@@ -1,15 +1,20 @@
 import React from "react";
 import ProfileCard from "./ProfileCard";
 
-export default function Profile({user}){
+export default function Profile({currentUser}){
     
-    // const ProfileComponent = user.keys().map((user, i) => {
-    //     return <ProfileCard key = {user.id} user = {user} > </ProfileCard>
-    // })
+   const array = [currentUser]
+   
+    const ProfileComponent = array.map((user) => {
+        return <ProfileCard key = {user.id} user = {user} > </ProfileCard>
+    })
+    const CartComponent = array.map((user) => {
+        return <CartsContainer key = {user.id} user = {user} > </CartsContainer>
+    })
 
     return (
         <div className='content-large'>
-            {/* {ProfileComponent} */} 
+           {ProfileComponent} 
         </div>
     )
     }    

@@ -8,6 +8,14 @@ import SignupForm from "./SignupForm";
 
 
 function LoggedIn({handleLogout, products, currentUser, setCurrentUser, isAuthenticated}) {
+
+
+    useEffect(() => {
+        fetch('/carts')
+        .then(resp => resp.json())
+        .then(carts => setProducts(carts))
+      },[])
+
     return (
         <div>
             <NavBar handleLogout = {handleLogout} isAuthenticated = {isAuthenticated} />
