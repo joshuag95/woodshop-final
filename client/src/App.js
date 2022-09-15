@@ -12,7 +12,7 @@ const App = () => {
 
   const history = useHistory()
 
-
+  
   useEffect(() => {
     fetch("/me").then((res) => {
       if (res.ok) {
@@ -24,6 +24,7 @@ const App = () => {
     });
   }, []);
   
+  
 
   const handleLogout = () => {
     setCurrentUser(null);
@@ -32,7 +33,7 @@ const App = () => {
     }
   
     const [products , setProducts] = useState([])
-console.log(currentUser)
+
     useEffect(() => {
       fetch('/products')
       .then(resp => resp.json())
@@ -42,7 +43,7 @@ console.log(currentUser)
     
   return (
     <div className="app">
-      <Router>{isAuthenticated ? <LoggedIn handleLogout = {handleLogout} isAuthenticated = {isAuthenticated} products = {products} /> : <LoggedOut isAuthenticated = {isAuthenticated} setCurrentUser = {setCurrentUser} products = {products} />}</Router>
+      <Router>{isAuthenticated ? <LoggedIn handleLogout = {handleLogout} isAuthenticated = {isAuthenticated} products = {products} currentUser = {currentUser} /> : <LoggedOut isAuthenticated = {isAuthenticated} setCurrentUser = {setCurrentUser} products = {products} />}</Router>
     </div>
   );
 };

@@ -7,7 +7,7 @@ import Home from "./Home";
 import SignupForm from "./SignupForm";
 
 
-function LoggedIn({handleLogout, products, setCurrentUser, isAuthenticated}) {
+function LoggedIn({handleLogout, products, currentUser, setCurrentUser, isAuthenticated}) {
     return (
         <div>
             <NavBar handleLogout = {handleLogout} isAuthenticated = {isAuthenticated} />
@@ -18,7 +18,7 @@ function LoggedIn({handleLogout, products, setCurrentUser, isAuthenticated}) {
                 </Route>
 
                 <Route exact path="/me">
-                    <Profile />
+                    <Profile currentUser = {currentUser} />
                 </Route>
 
                 <Route exact path='/signup'>
