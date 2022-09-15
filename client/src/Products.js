@@ -1,7 +1,11 @@
 import React from "react";
+import ProductsContainer from "./ProductsContainer";
 
-export default function Products(){
+export default function Products({products}){
     return (
-        <div>Products</div>
+        <>
+        <h1 className='page-header'>Our Products</h1>
+        <ProductsContainer products = {products}/>
+        </>
     )
 }
