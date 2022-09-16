@@ -2,7 +2,7 @@ import React from "react"
 import { NavLink } from "react-router-dom"
 
 
-function NavBar({user, handleLogout, isAuthenticated}) {
+function NavBar({handleLogout, isAuthenticated}) {
     return (
         <div>
             <NavLink path to ="/">Home</NavLink>

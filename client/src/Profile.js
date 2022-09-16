@@ -20,7 +20,7 @@ export default function Profile({ currentUser }) {
   const array2 = [currentCart]
 
   const array = [currentUser]
-  console.log(currentCart)
+ 
 
   const ProfileComponent = array.map((user) => {
     return <ProfileCard key={user.id} user={user} > </ProfileCard>

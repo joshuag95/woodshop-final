@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import LoginForm from "./LoginForm";
-import SignupForm from "./SignupForm";
-import { NavLink } from "react-router-dom";
 export default function Home({setCurrentUser}){
     return (
         <div>
