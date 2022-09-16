@@ -22,4 +22,11 @@ class CartsController < ApplicationController
         cart = Cart.find_by(id: params[:id])
         render json: cart.sum_total, status: :ok
     end
+
+    def add_to_cart
+        current_cart.add_item(params[:product_id])
+        # redirect to shopping cart or whereever
+    end
+      
+
 end
