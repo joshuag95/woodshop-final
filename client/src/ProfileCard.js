@@ -2,6 +2,9 @@ import React from "react"
 
 
 const ProfileCard = ({user}) => {
+    
+
+    
     return(
  
     <div className= 'profile'>
@@ -11,6 +14,8 @@ const ProfileCard = ({user}) => {
         <p className = 'user phone'>Phone: {user.phone}</p>
         <p className = 'user email'>Email: {user.email}</p>
         <p className = 'user address'>Shipping Address: {user.address}</p>
+        <p className = 'user cart status'>Order Confirmed: {user.carts}</p>
+        
         </>
 
 
