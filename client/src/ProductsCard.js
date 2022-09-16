@@ -19,7 +19,7 @@ const ProductsCard = ({products}) => {
             <img className = 'card image' src = {products.image} alt="product image"/>
             <p className = 'card body'>{products.description}</p>
             <button onClick={handleAddToCart}>Add To Cart</button>
-
+            
 
 
 

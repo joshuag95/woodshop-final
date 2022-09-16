@@ -33,6 +33,7 @@ const LoginForm = ({setCurrentUser, isAuthenticated}) => {
       if (res.ok) {
         res.json().then((user) => {
           setCurrentUser(user);
+          history.push('/me');
         });
       } else {
         res.json().then((errors) => {

@@ -10,6 +10,7 @@ const ProductsContainer = ({products}) => {
     return (
         <div className='content-large'>
             {ProductsComponent}
+            
         </div>
     )
     
