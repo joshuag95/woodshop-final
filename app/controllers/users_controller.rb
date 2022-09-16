@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     def create
         user = User.create(user_params)
           if user.valid?
+            cart = Cart.create(confirmed: false, user: user)
             session[:user_id] = user.id # this is the piece that logs a user in and keeps track of users info in subsequent requests.
             render json: user, status: :ok
           else

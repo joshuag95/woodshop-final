@@ -5,8 +5,11 @@ class CartsController < ApplicationController
     end
 
     def show
-        cart = Cart.find_by(id: params[:id])
-        render json: cart
+        if current_cart
+            render json: current_cart
+        else
+            render json: "no current session stored", status: :unauthorized
+        end
     end
 
     def confirm_cart
